@@ -8,7 +8,7 @@ import {
 
 import ODModdle from 'object-diagram-moddle';
 
-import { Differ } from '../lib/index.js';
+import diff from '../lib/index.js';
 
 describe('diff', function() {
 
@@ -83,6 +83,6 @@ async function getDiff(a, b) {
   const aDefs = await importDiagram(a);
   const bDefs = await importDiagram(b);
 
-  return new Differ().diff(aDefs, bDefs);
+  return diff(aDefs, bDefs);
 }
 
