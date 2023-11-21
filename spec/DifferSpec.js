@@ -62,7 +62,7 @@ describe('diff', function() {
     expect(results._layoutChanged).to.eql({});
     expect(results._changed).to.have.keys(['Object_2839']);
 
-    expect(results._changed['Object_2839'].attrs).to.deep.eql({
+    expect(results._changed['Object_2839'].attrs).to.deep.eq({
       name: { oldValue: '2:Component', newValue: '2:QuantifiedComponent' },
       attributeValues: { oldValue: 'quantity=77', newValue: 'quantity=1' }
 
