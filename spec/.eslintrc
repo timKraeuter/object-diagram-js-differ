@@ -2,5 +2,5 @@
   "env": {
     "jasmine": true
   },
-  "extends": "plugin:bpmn-io/es6"
+  "extends": "plugin:bpmn-io/recommended"
 }

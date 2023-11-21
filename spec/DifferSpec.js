@@ -13,6 +13,7 @@ import { Differ } from '../lib/index.js';
 describe('diff', function() {
 
   it('should discover add', async function() {
+
     // given
     const aDiagram = readFileSync('spec/fixtures/base.xml', 'utf-8');
     const bDiagram = readFileSync('spec/fixtures/add.xml', 'utf-8');
@@ -22,7 +23,7 @@ describe('diff', function() {
 
     // then
     expect(results._added).to.have.keys(
-      ['Object_2840', 'Link_Object_2669_to_Object_2840_type_components']);
+      [ 'Object_2840', 'Link_Object_2669_to_Object_2840_type_components' ]);
     expect(results._removed).to.eql({});
     expect(results._layoutChanged).to.eql({});
     expect(results._changed).to.eql({});
@@ -41,7 +42,7 @@ describe('diff', function() {
     // then
     expect(results._added).to.eql({});
     expect(results._removed).to.have.keys(
-      ['Object_2839', 'Link_Object_2669_to_Object_2839_type_components']);
+      [ 'Object_2839', 'Link_Object_2669_to_Object_2839_type_components' ]);
     expect(results._layoutChanged).to.eql({});
     expect(results._changed).to.eql({});
 
@@ -60,7 +61,7 @@ describe('diff', function() {
     expect(results._added).to.eql({});
     expect(results._removed).to.eql({});
     expect(results._layoutChanged).to.eql({});
-    expect(results._changed).to.have.keys(['Object_2839']);
+    expect(results._changed).to.have.keys([ 'Object_2839' ]);
 
     expect(results._changed['Object_2839'].attrs).to.deep.eq({
       name: { oldValue: '2:Component', newValue: '2:QuantifiedComponent' },
