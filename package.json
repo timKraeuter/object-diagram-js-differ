@@ -9,6 +9,14 @@
     "test": "jasmine"
   },
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timKraeuter/object-diagram-js-differ"
+  },
+  "keywords": [
+    "object diagram",
+    "diff"
+  ],
   "author": {
     "name": "Tim Kräuter",
     "url": "https://timkraeuter.com/"
