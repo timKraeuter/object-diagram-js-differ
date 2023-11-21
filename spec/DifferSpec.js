@@ -73,7 +73,7 @@ describe('diff', function() {
 // helpers //////////////////
 
 async function importDiagram(diagram) {
-  var moddle = new ODModdle();
+  const moddle = new ODModdle();
   const defs = await moddle.fromXML(diagram);
   return defs.rootElement;
 }
