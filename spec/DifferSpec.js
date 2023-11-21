@@ -69,6 +69,33 @@ describe('diff', function() {
 
     });
   });
+
+  it('should discover add and change', async function() {
+
+    // given
+    const aDiagram = readFileSync('spec/fixtures/PartsListTest-13.xml',
+      'utf-8');
+    const bDiagram = readFileSync('spec/fixtures/PartsListTest-14.xml',
+      'utf-8');
+
+    // when
+    const results = await getDiff(aDiagram, bDiagram);
+
+    // then
+    expect(results._added).to.have.keys(
+      [ 'Object_2767', 'Link_Object_2751_to_Object_2767_type_components' ]);
+    expect(results._removed).to.eql({});
+    expect(results._layoutChanged).to.eql({});
+    expect(results._changed).to.have.keys([ 'Object_2762' ]);
+
+    expect(results._changed['Object_2762'].attrs).to.deep.eq({
+      name: {
+        oldValue: '1:QuantifiedComponent',
+        newValue: '0:QuantifiedComponent',
+      },
+
+    });
+  });
 });
 
 // helpers //////////////////
