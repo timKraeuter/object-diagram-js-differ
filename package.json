@@ -39,14 +39,14 @@
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-syntax-import-assertions": "^7.24.1",
     "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "acorn-import-assertions": "^1.9.0",
     "rollup": "^2.79.1",
     "@rollup/plugin-terser": "^0.4.4"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.5.0",
+    "jsondiffpatch": "^0.6.0",
     "min-dash": "^4.2.1"
   },
   "files": [
