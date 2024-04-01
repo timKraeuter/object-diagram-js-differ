@@ -1,32 +1,26 @@
 import terser from '@rollup/plugin-terser';
 
 import resolve from '@rollup/plugin-node-resolve';
-import json from '@rollup/plugin-json';
 
 import pkg from './package.json';
 
 function pgl(plugins = []) {
   return [
-    json(),
     ...plugins
   ];
 }
 
-const srcEntry = pkg.source;
-
-const umdDist = pkg['umd:main'];
-
-const umdName = 'odDiff';
+const umdDist = 'dist/object-diagram-js-differ.js';
 
 export default [
 
   // browser-friendly UMD build
   {
-    input: srcEntry,
+    input: 'lib/index.js',
     output: {
-      file: umdDist.replace(/\.js$/, '.prod.js'),
+      name: 'odDiff',
+      file: umdDist.replace(/\.js$/, '.min.js'),
       format: 'umd',
-      name: umdName
     },
     plugins: pgl([
       resolve(),
@@ -34,21 +28,21 @@ export default [
     ]),
   },
   {
-    input: srcEntry,
+    input: 'lib/index.js',
     output: {
+      name: 'odDiff',
       file: umdDist,
       format: 'umd',
-      name: umdName
     },
     plugins: pgl([
       resolve(),
     ]),
   },
   {
-    input: srcEntry,
+    input: 'lib/index.js',
     output: [
-      { file: pkg.main, format: 'cjs', exports: 'default' },
-      { file: pkg.module, format: 'es', exports: 'default' }
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' }
     ],
     external: [
       'min-dash',
