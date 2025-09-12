@@ -47,7 +47,7 @@
     "@rollup/plugin-terser": "^0.4.4"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.6.0",
+    "jsondiffpatch": "^0.7.2",
     "min-dash": "^4.2.1"
   },
   "files": [
