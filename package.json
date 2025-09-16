@@ -1,9 +1,9 @@
 {
   "name": "object-diagram-js-differ",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A semantic diffing utility for object diagram files",
   "scripts": {
-    "all": "run-s lint test",
+    "all": "run-s lint test build",
     "lint": "eslint .",
     "lintFix": "eslint . --fix",
     "test": "jasmine",
@@ -42,13 +42,13 @@
     "jasmine": "^5.1.0",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-syntax-import-assertions": "^7.24.1",
-    "rollup": "^4.13.2",
+    "rollup": "^4.50.2",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.7.2",
-    "min-dash": "^4.2.1"
+    "jsondiffpatch": "^0.7.3",
+    "min-dash": "^4.2.3"
   },
   "files": [
     "dist"
