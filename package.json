@@ -1,6 +1,6 @@
 {
   "name": "object-diagram-js-differ",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A semantic diffing utility for object diagram files",
   "scripts": {
     "all": "run-s lint test build",
