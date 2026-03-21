@@ -10,8 +10,7 @@ export default [
       { file: pkg['exports']['.'].import, format: 'es' }
     ],
     external: [
-      'min-dash',
-      'diffpatch'
+      'min-dash'
     ],
     plugins: pgl()
   }

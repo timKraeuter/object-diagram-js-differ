@@ -8,7 +8,7 @@ import {
 
 import ODModdle from 'object-diagram-moddle';
 
-import diff from '../lib/index.js';
+import { diff } from '../lib/index.js';
 
 describe('diff', function() {
 
