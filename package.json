@@ -37,7 +37,7 @@
     "@babel/eslint-parser": "^7.28.6",
     "@babel/plugin-syntax-import-assertions": "^7.28.6",
     "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "chai": "^6.2.2",
     "eslint": "^9.39.2",
     "eslint-plugin-bpmn-io": "^2.2.0",
